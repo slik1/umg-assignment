@@ -1,1 +1,19 @@
-Yooo!
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    <button mat-icon-button aria-label="close" (click)="opened = !opened">
+      <mat-icon>close</mat-icon>
+    </button>
+    Sidenav here
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <div>
+        <button mat-icon-button aria-label="menu button" (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>
+    Content here
+  </mat-sidenav-content>
+</mat-sidenav-container>
